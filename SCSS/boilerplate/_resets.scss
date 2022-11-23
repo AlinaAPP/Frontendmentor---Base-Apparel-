@@ -1,0 +1,48 @@
+/* ------------ */
+/* Box sizing */
+/* ----------- */
+
+//ensures that if you add padding or border to an element on your website it means it'll be included in the final width or height of the element
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset margin and padding */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* set up the body */
+
+html,
+body {
+  font-size: 100%; //this will make sure that the font size on your website is going to match 100% of the default font size set in your browser
+  height: 100vh;
+}
+
+/* set up images */
+
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* links */
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+/* list item */
+
+li {
+  list-style-type: none;
+}

@@ -1,0 +1,26 @@
+@use "../utilities" as u;
+
+.footer {
+  margin-inline: u.pxToRem(20px);
+  margin-top: 2rem;
+  text-align: center;
+  font-size: u.pxToRem(13px);
+
+  @include u.breakpoint-up(small) {
+    margin-top: 2rem;
+    margin-inline: auto;
+    width: min(100% - u.pxToRem(40px), u.pxToRem(500px));
+  }
+
+  @include u.breakpoint-up(large) {
+    grid-column: 1/2;
+    grid-row: 3/4;
+
+    text-align: start;
+    align-self: end;
+    padding-left: 6em;
+    margin-top: 0;
+    margin-inline: 0;
+    width: 100%;
+  }
+}

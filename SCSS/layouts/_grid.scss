@@ -1,0 +1,6 @@
+@use "../utilities" as u;
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}

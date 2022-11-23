@@ -1,0 +1,33 @@
+@use "../utilities" as u;
+
+body {
+  display: grid;
+  font-family: var(--font-family);
+  color: var(--clr-light-body);
+  background: var(--clr-bg);
+
+  @include u.breakpoint-up(large) {
+    background-image: url("../../images/bg-pattern-desktop.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    margin-inline-start: u.pxToRem(80px);
+    grid-template-columns: 1fr 1fr;
+  }
+  @include u.breakpoint-up(xlarge) {
+    grid-template-columns: 60% 40%;
+  }
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.letter-spacing {
+  letter-spacing: u.pxToRem(7px);
+
+  @include u.breakpoint-up(large) {
+    letter-spacing: u.pxToRem(15px);
+  }
+}
